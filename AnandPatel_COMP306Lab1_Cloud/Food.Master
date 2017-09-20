@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Food.master.cs" Inherits="AnandPatel_COMP306Lab1_Cloud.Food" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+          
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+          <link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body bgcolor="#07EBF5">
+    <form id="form1" runat="server">
+        <div class="content">
+            <h1>Restaurant</h1>
+            <asp:ContentPlaceHolder ID="body" runat="server">
+                           </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
