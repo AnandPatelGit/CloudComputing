@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Food.Master" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="AnandPatel_COMP306Lab1_Cloud.Order" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            margin-left: 40px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
     <strong><h3> <asp:Label Text="Fill the details and choose the item you want to Order" runat="server"/></h3></strong>
@@ -16,8 +21,9 @@
                </tr>  
                 <tr>  
                     <td><strong>Last Name :</strong></td>  
-                     <td> <asp:TextBox ID="textBoxLastName" runat="server"></asp:TextBox>
-                         <asp:Button ID="ButtonRememberMe" runat="server" OnClick="ButtonRememberMe_Click" Text="Button" />
+                     <td class="auto-style1"> <asp:TextBox ID="textBoxLastName" runat="server"></asp:TextBox>
+                         &nbsp;&nbsp;
+                         <asp:Button ID="ButtonRememberMe" runat="server" OnClick="ButtonRememberMe_Click" Text="Remember Me" />
                     </td>  
                 </tr>  
                 <tr>  
@@ -42,7 +48,7 @@
                 <tr>
                     <td><strong>Province</strong></td>
                     <td>
-                        <asp:DropDownList ID="dropDownListProvince" runat="server" CssClass="select-dropdown">
+                        <asp:DropDownList ID="dropDownListProvince" runat="server">
                             <asp:ListItem>ONTARIO</asp:ListItem>
                             <asp:ListItem>MANITOBA</asp:ListItem>
                             <asp:ListItem>ALBERTA</asp:ListItem>
@@ -87,7 +93,7 @@
                   
                 <tr>  
                     <td>  
-                        <asp:Button ID="Button1" runat="server" Text="Button" />  
+                        <asp:Button ID="Button1" runat="server" Text="Order" />  
                     </td>  
                 </tr>  
             </table>  
