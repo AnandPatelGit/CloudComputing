@@ -18,8 +18,8 @@
 </head>
 <body bgcolor="#07EBF5">
     <form id="form1" runat="server">
-        <div class="content">
-            <h1>Restaurant</h1>
+        <div cssClass="content">
+            <h2>Restaurant</h2>
             <asp:ContentPlaceHolder ID="body" runat="server">
                            </asp:ContentPlaceHolder>
         </div>

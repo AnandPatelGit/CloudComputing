@@ -3,7 +3,7 @@
     <title></title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-    <strong><h3> <asp:Label Text="Fill the details and choose the item you want to Order" runat="server"/> </h3></strong>
+    <strong><h3> <asp:Label Text="Fill the details and choose the item you want to Order" runat="server"/></h3></strong>
      
         <div class="container">
             <table class="auto-style1">  
@@ -16,7 +16,9 @@
                </tr>  
                 <tr>  
                     <td><strong>Last Name :</strong></td>  
-                     <td> <asp:TextBox ID="textBoxLastName" runat="server"></asp:TextBox></td>  
+                     <td> <asp:TextBox ID="textBoxLastName" runat="server"></asp:TextBox>
+                         <asp:Button ID="ButtonRememberMe" runat="server" OnClick="ButtonRememberMe_Click" Text="Button" />
+                    </td>  
                 </tr>  
                 <tr>  
                     <td><strong>City</strong></td>  
@@ -40,7 +42,7 @@
                 <tr>
                     <td><strong>Province</strong></td>
                     <td>
-                        <asp:DropDownList ID="dropDownListProvince" runat="server">
+                        <asp:DropDownList ID="dropDownListProvince" runat="server" CssClass="select-dropdown">
                             <asp:ListItem>ONTARIO</asp:ListItem>
                             <asp:ListItem>MANITOBA</asp:ListItem>
                             <asp:ListItem>ALBERTA</asp:ListItem>
