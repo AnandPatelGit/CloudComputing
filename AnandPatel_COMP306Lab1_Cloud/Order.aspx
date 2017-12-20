@@ -4,14 +4,34 @@
     <style type="text/css">
         .auto-style1 {
             margin-left: 40px;
+            
         }
-    </style>
+    </style> 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-    <strong><h3> <asp:Label Text="Fill the details and choose the item you want to Order" runat="server"/></h3></strong>
-     
+   
         <div class="container">
+            <table class="auto-style1">
+                <tr>
+                    <td>
+                    <em><h5> <asp:Label Text="Fill the details and choose the item you want to Order" runat="server"/><hr></h5></em>    
+        
+                        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:AdRotator ID="AdRotator1" Height="500" Width="800" runat="server" AdvertisementFile="~/XMLFile.xml" />
+                <asp:Timer ID="Timer1" runat="server" Interval="5000">
+                </asp:Timer>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
+                </td>
+                </tr>
+            </table>
+
             <table class="auto-style1">  
+                
                 <tr>  
                     <td><strong>First Name :</strong></td>  
                     <td>  
@@ -61,10 +81,9 @@
                     <td>
                         <em>
                         <asp:CheckBoxList ID="checkboxListFoodAndDrink" runat="server">
-                            <asp:ListItem>Espresso</asp:ListItem>
+                          <asp:ListItem>Espresso</asp:ListItem>
                             <asp:ListItem>Pepsi</asp:ListItem>
                             <asp:ListItem>Diet Pepsi</asp:ListItem>
-                            <asp:ListItem>7 Up</asp:ListItem>
                             <asp:ListItem>Sandwiches</asp:ListItem>
                             <asp:ListItem>Panini</asp:ListItem>
                             <asp:ListItem>Poutine</asp:ListItem>
@@ -72,7 +91,20 @@
                         </asp:CheckBoxList>
                         </em>
                     </td>
+                    
                 </tr>
+           
+                <!--<tr>
+                     <div class="carousel">
+                        <a class="carousel-item" href="#one!"><img src="https://storage.googleapis.com/anand_restaurant/espresso.jpg" height="400"></a>
+                        <a class="carousel-item" href="#two!"><img src="https://storage.googleapis.com/anand_restaurant/pepsi.jpg" height="400"></a>
+                        <a class="carousel-item" href="#three!"><img src="https://storage.googleapis.com/anand_restaurant/dietpepsi.jpg" height="400"></a>
+                        <a class="carousel-item" href="#four!"><img src="https://storage.googleapis.com/anand_restaurant/sandwich.jpg" height="400"></a>
+                        <a class="carousel-item" href="#five!"><img src="https://storage.googleapis.com/anand_restaurant/panini.jpg" height="400"></a>
+                         <a class="carousel-item" href="#six!"><img src="https://storage.googleapis.com/anand_restaurant/poutine.jpg" height="400"></a>
+                         <a class="carousel-item" href="#seven!"><img src="https://storage.googleapis.com/anand_restaurant/burrito.jpg" height="400"></a>
+                    </div>
+                </tr> -->
                 <tr>  
                     <td><strong>Pickup or Delivery</strong></td>  
                     <td>  
@@ -95,8 +127,11 @@
                     <td>  
                         <asp:Button ID="Button1" runat="server" Text="Order" />  
                     </td>  
+                     <td>  
+                        <asp:Button ID="Button2" runat="server" Text="Upload Image" OnClick="Button2_Click" />  
+                    </td>
                 </tr>  
             </table>  
         </div>
-   
+
 </asp:Content>

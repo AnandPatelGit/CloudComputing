@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+    <Ad>
+        <ImageUrl>https://storage.googleapis.com/anand_restaurant/espresso.jpg</ImageUrl>
+     
+  </Ad>
+    <Ad>
+        <ImageUrl>https://storage.googleapis.com/anand_restaurant/pepsi.jpg</ImageUrl>
+     
+  </Ad>
+    <Ad>
+        <ImageUrl>https://storage.googleapis.com/anand_restaurant/dietpepsi.jpg</ImageUrl>
+     
+  </Ad>
+    <Ad>
+        <ImageUrl>https://storage.googleapis.com/anand_restaurant/sandwich.jpg</ImageUrl>
+     
+  </Ad>
+    <Ad>
+        <ImageUrl>https://storage.googleapis.com/anand_restaurant/panini.jpg</ImageUrl>
+     
+  </Ad>
+    <Ad>
+        <ImageUrl>https://storage.googleapis.com/anand_restaurant/poutine.jpg</ImageUrl>
+     
+  </Ad>
+    <Ad>
+        <ImageUrl>https://storage.googleapis.com/anand_restaurant/burrito.jpg</ImageUrl>
+     
+  </Ad>
+</Advertisements>

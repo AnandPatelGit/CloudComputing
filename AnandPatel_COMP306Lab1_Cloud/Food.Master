@@ -5,24 +5,48 @@
 <html>
 <head runat="server">
     <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-          
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 
+    <style type="text/css">
+        .header_style {
+            margin-left: 900px;
+        }
+        .body_style{
+            background-image:url('~/Images/background.jpg');
+        }
+    </style>
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-          <link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
+        <link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
     </asp:ContentPlaceHolder>
 </head>
-<body bgcolor="#07EBF5">
-    <form id="form1" runat="server">
-        <div cssClass="content">
-            <h2>Restaurant</h2>
+<body bg-color="#0C95F8">
+      <form id="form1" runat="server">
+        <div cssclass="content">
+
+
+            <div class="bordered"><h3><em>Desirous Delicacies</em></h3>
+            <div class="header_style">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"><h5>
+                    <asp:LinkButton Text="Home" runat="server" ID="LinkButton1"></asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;
+                                <asp:LinkButton Text="Menu" runat="server" ID="LinkButton4" OnClick="LinkButton4_Click"></asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton Text="About Us" runat="server" ID="LinkButton2"></asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;
+            <asp:LinkButton Text="Contact Us" runat="server" ID="LinkButton3"></asp:LinkButton>
+                    </h5>
+
+                </asp:ContentPlaceHolder>
+            </div>
+
             <asp:ContentPlaceHolder ID="body" runat="server">
-                           </asp:ContentPlaceHolder>
+            </asp:ContentPlaceHolder>
         </div>
     </form>
+
 </body>
 </html>

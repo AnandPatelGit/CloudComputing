@@ -15,11 +15,14 @@ namespace AnandPatel_COMP306Lab1_Cloud
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+            
         }
 
         protected void ButtonRememberMe_Click(object sender, EventArgs e)
         {
+
+           
             
             string cs = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(cs))
@@ -58,6 +61,11 @@ namespace AnandPatel_COMP306Lab1_Cloud
                     Response.Write("Provide input in the fields");
                 }
             }
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+           // Response.Redirect();
         }
     }
 }

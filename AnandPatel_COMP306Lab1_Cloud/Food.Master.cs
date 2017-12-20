@@ -13,5 +13,10 @@ namespace AnandPatel_COMP306Lab1_Cloud
         {
 
         }
+
+        protected void LinkButton4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("https://storage.googleapis.com/anand_restaurant/Menu.pdf");
+        }
     }
 }
