@@ -68,12 +68,12 @@
                 <tr>
                     <td><strong>Province</strong></td>
                     <td>
-                        <asp:DropDownList ID="dropDownListProvince" runat="server">
+                      <div class="dropdown-content">  <asp:DropDownList ID="dropDownListProvince" runat="server">
                             <asp:ListItem>ONTARIO</asp:ListItem>
                             <asp:ListItem>MANITOBA</asp:ListItem>
                             <asp:ListItem>ALBERTA</asp:ListItem>
                             <asp:ListItem>PRINCE EDWARD ISLAND</asp:ListItem>
-                        </asp:DropDownList>
+                        </asp:DropDownList></div>
                     </td>
                 </tr>
                 <tr>
@@ -127,8 +127,12 @@
                     <td>  
                         <asp:Button ID="Button1" runat="server" Text="Order" />  
                     </td>  
-                     <td>  
-                        <asp:Button ID="Button2" runat="server" Text="Upload Image" OnClick="Button2_Click" />  
+                     <td>
+                         <asp:FileUpload ID="fileUploadUser" runat="server"  />
+                         <br/>
+                         <asp:Button ID="Button2" runat="server" Text="Upload" OnClick="Button2_Click"/>
+                         &nbsp;
+                         <asp:Label id="fileSubmit" runat="server"/>
                     </td>
                 </tr>  
             </table>  

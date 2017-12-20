@@ -24,7 +24,8 @@
     </asp:ContentPlaceHolder>
 </head>
 <body bg-color="#0C95F8">
-      <form id="form1" runat="server">
+   
+      <form id="form1" runat="server" enctype="multipart/form-data">
         <div cssclass="content">
 
 

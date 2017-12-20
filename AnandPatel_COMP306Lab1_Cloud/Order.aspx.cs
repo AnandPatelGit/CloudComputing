@@ -8,11 +8,18 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using System.Web.UI.HtmlControls;
+using System.IO;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Storage.v1;
+using Google.Cloud.Storage.V1;
+using Restaurant_App.Data_Layer;
 
 namespace AnandPatel_COMP306Lab1_Cloud
 {
     public partial class Order : System.Web.UI.Page
     {
+        protected HtmlInputFile fillMyFile;
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -62,10 +69,31 @@ namespace AnandPatel_COMP306Lab1_Cloud
                 }
             }
         }
-
+        private ImageUploader _imageUploader;
         protected void Button2_Click(object sender, EventArgs e)
         {
-           // Response.Redirect();
+            _imageUploader = new ImageUploader("anand_restaurant");
+
+            string fileName;
+
+            try
+            {
+                if (fileUploadUser.HasFile)
+                {
+                    fileName = fileUploadUser.FileName;
+
+                    HttpPostedFile image = fileUploadUser.PostedFile;
+    
+                    _imageUploader.UploadImage(image, fileName);
+
+                    fileSubmit.Text = "File Uploaded Successfully";
+                }
+            }
+            catch (Exception ex)
+            {
+                fileSubmit.Text = "File Upload Error";
+                //ExceptionLogging.SendExcepToDB(ex);
+            }
         }
     }
 }
